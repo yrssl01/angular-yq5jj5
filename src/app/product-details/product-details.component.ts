@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-
+import { NgbRating } from "@ng-bootstrap/ng-bootstrap";
 import { products } from "../products";
 
 @Component({
