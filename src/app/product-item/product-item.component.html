@@ -1,6 +1,16 @@
-
-  <ngb-rating [max]="5" [(rate)]="product.rating" [readonly]="false"></ngb-rating>
+<h3>
+	<a [title]="product.name" [routerLink]="['/products', product.id]">
+		{{ product.name }}
+	</a>
+</h3>
+<p *ngIf="product.description">
+	Description: {{product.description}}
+</p>
+<a href="https://t.me/share/url?url={{product.link}}&text={{product.description}}"><button (click)="share()">
+    Share
+  </button></a>
+<ngb-rating [max]="5" [(rate)]="product.rating" [readonly]="false"></ngb-rating>
 
 <p>
-  <img [src]="product.image" class="image">
+	<img [src]="product.image" class="image">
 </p>
